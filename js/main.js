@@ -4,7 +4,7 @@ $(document).ready(function () {
     imgSize();
     // run function on resize of the window
     $(window).resize(function () {
-
+      imgResize();
     });
     // run function on scroll
     $(window).scroll(function () {
@@ -20,7 +20,7 @@ function imgSize() {
   var h = $("#container").height();
   for (let i = 0; i < ids.length; i++) {
     var idw = $(ids[i]).width();
-    var nw = idw * .3;
+    var nw = idw * .3 * (w / 800);
     $(ids[i]).css("width", nw);
     var nh = $(ids[i]).height();
     var xpos = Math.floor(Math.random() * (w - nw));
@@ -28,6 +28,17 @@ function imgSize() {
     $(ids[i]).css("top", (ypos + 25));
     $(ids[i]).css("left", (xpos + 100));
     $(ids[i]).removeClass("loading");
+  }
+}
+function imgResize() {
+  var ids = ["#hat","#bow", "#camera", "#numbers", "#pipe", "#smoke", "#stand", "#viewfinder"];
+  var w = $("#container").width();
+  if (w)
+  for (let i = 0; i < ids.length; i++) {
+    var idw = $(ids[i]).width();
+    var nw = idw * .99;
+    $(ids[i]).css("width", nw);
+    console.log(nw);
   }
 }
 function collage() {
