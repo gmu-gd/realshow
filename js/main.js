@@ -20,11 +20,11 @@ function imgSize() {
   var h = $("#container").height();
   for (let i = 0; i < ids.length; i++) {
     var idw = $(ids[i]).width();
-    var nw = idw * .3 * (w / 800);
+    var nw = idw * .2 * (w / 800);
     $(ids[i]).css("width", nw);
     var nh = $(ids[i]).height();
     var xpos = Math.floor(Math.random() * (w - nw));
-    var ypos = Math.floor(Math.random() * (h - nh - 200));
+    var ypos = Math.floor(Math.random() * (h - nh - 100));
     $(ids[i]).css("top", (ypos + 25));
     $(ids[i]).css("left", (xpos + 100));
     $(ids[i]).removeClass("loading");
