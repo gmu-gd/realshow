@@ -129,11 +129,11 @@ aside {
   position: fixed;
   transform-origin: top left;
   transform: rotate(-90deg);
-  top: calc(50vh + 215px);
+  top: calc(50vh + 240px);
   left: 0;
   margin: 0;
   color: #1f1f1f;
-  width: 431px;
+  width: 481px;
 }
 footer {
   width: 100vw;
