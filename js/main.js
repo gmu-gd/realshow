@@ -18,9 +18,12 @@ function imgSize() {
   var ids = ["#hat","#bow", "#camera", "#numbers", "#pipe", "#smoke", "#stand", "#viewfinder"];
   var w = $("#container").width();
   var h = $("#container").height();
+  console.log("w is " + w);
   for (let i = 0; i < ids.length; i++) {
     var idw = $(ids[i]).width();
     var nw = idw * .2 * (w / 800);
+    console.log("inside loop, w is " + w);
+    console.log("width for " + ids[i] + "is " + idw + " new width is " + nw);
     $(ids[i]).css("width", nw);
     var nh = $(ids[i]).height();
     var xpos = Math.floor(Math.random() * (w - nw));
