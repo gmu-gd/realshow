@@ -94,7 +94,7 @@ html {
   font-family: nitti-grotesk, sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
 }
  body {
    margin: 0;
@@ -180,6 +180,16 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+a, a:visited, a:active {
+  text-decoration: none;
+  color: #ede3c6;
+  border-bottom: 2px solid #a5c3ce;
+  transition: 1s all ease;
+}
+a:hover {
+  color: #bc242f;
+  border-bottom: 2px solid #bc242f;
 }
 .no-space {
   margin: 0;
@@ -303,7 +313,7 @@ ul {
    Modify as content requires.
    ========================================================================== */
 @media only screen and (max-width: 1000px) {
-  #container img {
+  #container {
     display: none;
   }
    main {
