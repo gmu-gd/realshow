@@ -125,6 +125,23 @@ main div {
   background-color: #1f1f1f;
   color: #ede3c6;
 }
+#judges {
+  width: 100%;
+  display: flow-root;
+  padding: 0;
+}
+.judge {
+  padding: 0;
+  width: calc(50% - 12.5px);
+  float: left;
+  margin-bottom: 5px;
+}
+.judge img {
+  width: 100%;
+}
+.judge:nth-of-type(odd) {
+  margin-right: 25px;
+}
 aside {
   position: fixed;
   transform-origin: top left;
@@ -313,6 +330,20 @@ a:hover {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+  .judge {
+    padding: 0;
+    width: 100%;
+    float: none;
+    margin-bottom: 5px;
+  }
+  .judge img {
+    width: 75%;
+  }
+  .judge:nth-of-type(odd) {
+    margin-right: 0;
+  }
+}
 @media only screen and (max-width: 1000px) {
   #container {
     display: none;
@@ -333,7 +364,19 @@ a:hover {
 @media only screen and (max-width: 700px) {
   main div {
     padding: 50px 25px;
- }
+  }
+  .judge {
+    padding: 0;
+    width: 100%;
+    float: none;
+    margin-bottom: 5px;
+  }
+  .judge img {
+    width: 75%;
+  }
+  .judge:nth-of-type(odd) {
+    margin-right: 0;
+  }
 }
 @media only screen and (min-width: 600px) {
   h1 {
@@ -343,7 +386,11 @@ a:hover {
     font-size: 4em;
   }
 }
-
+@media only screen and (max-width: 500px) {
+  .judge img {
+    width: 100%;
+  }
+}
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
