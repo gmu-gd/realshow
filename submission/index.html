@@ -11,10 +11,15 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
     </head>
-    <body>
+    <body id="form">
         <main>
             <div>
-                <form action="https://getform.io/f/d79a3a49-8b22-42f9-a858-d109383b5891" method="POST" enctype="multipart/form-data">
+                <h1>The Real</h1>
+                <h1>Show <span class="red">23</span></h1>
+                <hr class="line">
+                <h2>Submission Form</h2>
+                <p>Text about submissions and any other relevant information to have.</p>
+                <form id="rs-sub" action="https://getform.io/f/d79a3a49-8b22-42f9-a858-d109383b5891" method="POST" enctype="multipart/form-data">
                     <fieldset>
                         <label for="school-name">School Name</label>
                         <input type="text" name="school-name" required>
@@ -38,7 +43,8 @@
                     <!-- select field handle -->
                     <fieldset>
                         <label for="class">Class</label>
-                        <select name="Class" required>
+                        <select id="dropdown" name="class" required>
+                            <option value="default" selected disabled>Choose Class</option>
                             <option value="freshman">Freshman</option>
                             <option value="sophomore">Sophomore</option>
                             <option value="junior">Junior</option>
@@ -46,14 +52,19 @@
                         </select>
                     </fieldset>
                     <fieldset>
-                        <label for="file">File Upload</label>
-                        <input type="file" name="file" required>
+                        <label>File Upload</label>
+                        <input type="file" id="files" name="pdf" required/>
                     </fieldset>
                     <!-- add hidden Honeypot input to prevent spams -->
                     <input type="hidden" name="_gotcha" style="display:none !important">
-                    <button type="submit">Send</button>
+                    <button type="submit" id="sub-but">Send</button>
                 </form>
             </div>
         </main>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+        <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

@@ -2,6 +2,7 @@ $(document).ready(function () {
     // run function on initial page load
     collage();
     imgSize();
+    form();
     // run function on resize of the window
     $(window).resize(function () {
       imgSize();
@@ -41,4 +42,35 @@ function collage() {
   $("#smoke").draggable({ containment: "#container", scroll: false, stack: "img" });
   $("#stand").draggable({ containment: "#container", scroll: false, stack: "img" });
   $("#viewfinder").draggable({ containment: "#container", scroll: false, stack: "img" });
+}
+
+function form() {
+  $("#files").change(function() {
+    filename = this.files[0].name;
+    $('.fileupload').text(filename);
+    $('.fileupload').removeClass('nonechosen');
+      $('.fileupload').addClass('valid');
+  });
+  $('#dropdown').change(function() {
+    if ($(this).val() != 'default') {
+      $(this).addClass('valid');
+      $(this).removeClass('nonechosen');
+    }
+  });
+  var value = $('#dropdown option:selected').val()
+  console.log(value);
+  $('#sub-but').click( function(){
+    console.log('submitted');
+    if($('#dropdown option:selected').val() == 'default'){ 
+      $('#dropdown').addClass('nonechosen');
+    } else {
+      $('#dropdown').removeClass('nonechosen');
+    }
+    if($('.fileupload').text() == 'Select File'){
+      $('.fileupload').addClass('nonechosen');
+    } else {
+      $('.fileupload').removeClass('nonechosen');
+    }
+    $('#rs-sub').addClass('submitted');
+  });
 }
