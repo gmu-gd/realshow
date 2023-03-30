@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="https://use.typekit.net/dkj2oct.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <main>
+            <div>
+                <form action="https://getform.io/f/d79a3a49-8b22-42f9-a858-d109383b5891" method="POST" enctype="multipart/form-data">
+                    <fieldset>
+                        <label for="school-name">School Name</label>
+                        <input type="text" name="school-name" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="instructor-name">Instructor Name</label>
+                        <input type="text" name="instructor-name" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="instructor-email">Instructor Email</label>
+                        <input type="email" name="instructor-email" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="student-name">Student Name</label>
+                        <input type="text" name="student-name" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="student-email">Student Email</label>
+                        <input type="email" name="student-email" required>
+                    </fieldset>
+                    <!-- select field handle -->
+                    <fieldset>
+                        <label for="class">Class</label>
+                        <select name="Class" required>
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="file">File Upload</label>
+                        <input type="file" name="file" required>
+                    </fieldset>
+                    <!-- add hidden Honeypot input to prevent spams -->
+                    <input type="hidden" name="_gotcha" style="display:none !important">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
