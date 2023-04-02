@@ -180,7 +180,7 @@ main div {
   margin-right: 10px;
   cursor: pointer;
 }
-#form form button {
+#form form button, .but {
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: #1f1f1f;
@@ -191,9 +191,12 @@ main div {
   cursor: pointer;
   transition: all .5s ease;
 }
-#form form button:hover {
+#form form button:hover, .but:hover {
   background-color: #a5c3ce;
   color: #1f1f1f;
+}
+.but:first-of-type {
+  margin-right: 50px;
 }
 #judges {
   width: 100%;
@@ -401,6 +404,10 @@ a:hover {
    Modify as content requires.
    ========================================================================== */
 @media only screen and (min-width: 1000px) and (max-width: 1400px) {
+  #form main div {
+    width: 65vw;
+    margin: 0 auto;
+  }
   .judge {
     padding: 0;
     width: 100%;
@@ -419,14 +426,16 @@ a:hover {
     display: none;
   }
    main {
-/*   margin: 35vh 0 0;*/
-/*   margin: 50px;*/
     width: calc(100vw - 50px);
     margin-left: 50px;
   }
   main div {
     padding: 50px;
  }
+ #form main div {
+    width: 75vw;
+    margin: 0 auto;
+  }
   aside {
     left: -25px;
   }
@@ -434,6 +443,9 @@ a:hover {
 @media only screen and (max-width: 700px) {
   main div {
     padding: 50px 25px;
+  }
+  #form main div {
+    width: 100%;
   }
   .judge {
     padding: 0;
