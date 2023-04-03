@@ -282,6 +282,16 @@ a:hover {
   color: #bc242f;
   border-bottom: 2px solid #bc242f;
 }
+a.a-h1, a.a-h1:visited, a.a-h1:active {
+  text-decoration: none;
+  color: #ede3c6;
+  border-bottom: none;
+  transition: none;
+}
+a.a-h1:hover {
+  color: #ede3c6;
+  border-bottom: none;
+}
 a.a-but, a.a-but:visited, a.a-but:active {
   text-decoration: none;
   color: #ede3c6;
